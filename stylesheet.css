@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-section {
+  max-width: 693px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.company-name {
+  width: fit-content;
+  font-size: 32px;
+  font-weight: bold;
+  color: #15202a;
+  text-transform: uppercase;
+  margin: 80px auto 40px auto;
+}
+
+.announcemnet {
+  margin: 0 auto 94px auto;
+}
+
+.announcemnet__title {
+  font-size: 48px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+
+.title__first-part {
+  color: #969696;
+  font-weight: lighter;
+}
+
+.title__second-part {
+  font-weight: bold;
+  color: #15202a;
+}
+
+.announcemnet__description {
+  width: fit-content;
+  text-align: center;
+  font-size: 20px;
+  color: #15202a;
+  margin: 0 auto 45px auto;
+}
+
+.announcemnet__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+}
+
+.form__input-field {
+  max-width: 421px;
+  width: 100%;
+  padding: 18px 30px;
+  border: 1px solid #c2d3ff;
+  border-radius: 28px;
+  outline: none;
+}
+
+.form__input-field::placeholder {
+  font-weight: lighter;
+  font-size: 16px;
+  color: #c2d3ff;
+}
+
+.form__error-msg {
+  font-size: 12px;
+  font-style: italic;
+  color: #ff5466;
+  position: absolute;
+  left: 33px;
+  bottom: -18px;
+  display: none;
+}
+
+.form__input-field:user-invalid + .form__error-msg {
+  display: block;
+}
+
+.form__input-field:user-invalid {
+  border: 1px solid #ff5466;
+}
+
+.form__input-field:user-invalid {
+  animation: shakeeffect 0.3s ease-in-out;
+}
+
+@keyframes shakeeffect {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.form__submit-btn {
+  max-width: 200px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  padding: 19px 0;
+  background: #4c7bf3;
+  border-radius: 28px;
+  color: #ffffff;
+  box-shadow: 2px 4px 8px rgba(76, 123, 243, 0.5);
+  transition: background 0.3s ease-in;
+}
+
+.form__submit-btn:hover {
+  background: #6b8fec;
+}
+
+.sample-dashboard-img {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto 72px auto;
+}
+
+.sample-dashboard-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.footer {
+  max-width: 242px;
+  width: 100%;
+  padding: 28px;
+  margin: 0 auto;
+}
+
+.footer__social-media {
+  max-width: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto 25px auto;
+}
+
+.social-media__app-icon {
+  width: 31px;
+  height: 31px;
+  background: #ffffff;
+  border: 1px solid #4c7bf379;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.social-media__app-icon i {
+  color: #4c7bf3;
+}
+
+.social-media__app-icon:hover {
+  background: #4c7bf3;
+}
+
+.social-media__app-icon:hover i {
+  color: #ffffff;
+}
+
+.footer__copy-right {
+  text-align: center;
+  color: #969696;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .company-name {
+    font-size: 20px;
+  }
+
+  .announcemnet {
+    margin-bottom: 72px;
+  }
+
+  .announcemnet__title {
+    font-size: 22px;
+    margin-bottom: 22px;
+  }
+
+  .announcemnet__description {
+    font-size: 12px;
+    margin-bottom: 33px;
+  }
+
+  .announcemnet__form {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .form__input-field {
+    max-width: 282px;
+    padding: 10px 32px;
+  }
+
+  .form__input-field::placeholder {
+    font-size: 12px;
+  }
+
+  .form__error-msg {
+    font-size: 10px;
+    top: 40px;
+    left: 65px;
+  }
+
+  .form__input-field:user-invalid {
+    margin-bottom: 42px;
+    transition: margin-bottom 0.3s ease-in-out;
+  }
+
+  .form__submit-btn {
+    max-width: 282px;
+    font-size: 12px;
+    padding: 12px 0;
+  }
+
+  .sample-dashboard-img {
+    max-width: 440px;
+    margin-bottom: 120px;
+  }
+
+  .footer__copy-right {
+    font-size: 10px;
+  }
+}
